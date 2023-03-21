@@ -4,6 +4,7 @@ import path from "path";
 import http from "http";
 import {Server} from "socket.io";
 import EventEmitter from "events";
+import "./src/config/dbConnect.js"
 
 
 
@@ -13,7 +14,7 @@ const PORT = process.env.PORT || 8080;
 
 const currentPath = url.fileURLToPath(import.meta.url);
 const publicDir = path.join(currentPath, "../", "public");
-console.log(publicDir);
+
 
 app.use(express.static(publicDir));
 
